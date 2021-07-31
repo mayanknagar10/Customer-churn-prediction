@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Customer Churn</a>
+      </div>
+    </nav>
+
+    <!-- Button trigger modal -->
+    <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Prediction</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>The customer will leave the bank</h6>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              Customer Churn using Machine Learning
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              quisquam laboriosam pariatur doloribus ipsam rem, doloremque
+              accusamus, neque, minima molestias maxime eius culpa. Dolores
+              maiores deleniti corrupti fuga consectetur ducimus!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="mt-5">
+        <div class="mb-3">
+          <label for="credit_score" class="form-label">Credit Score</label>
+          <input
+            type="number"
+            class="form-control"
+            id="credit_score"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input type="number" class="form-control" id="age" required />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="tenure" class="form-label">Tenure</label>
+          <input type="number" class="form-control" id="tenure" required />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="account_balance" class="form-label"
+            >Account Balance</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="account_balance"
+            required
+          />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="products" class="form-label">No of Products</label>
+          <input type="number" class="form-control" id="products" required />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="credit_card" class="form-label"
+            >Does the customer have Credit Card?</label
+          >
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="credit_card"
+              id="credit_card_yes"
+              required
+            />
+            <label class="form-check-label" for="credit_card_yes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="credit_card"
+              id="credit_card_no"
+            />
+            <label class="form-check-label" for="credit_card_no"> No </label>
+          </div>
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="credit_card" class="form-label"
+            >Is the customer active member?</label
+          >
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="active_member"
+              id="active_member_yes"
+              required
+            />
+            <label class="form-check-label" for="active_member_yes">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="active_member"
+              id="active_member_no"
+            />
+            <label class="form-check-label" for="active_member_no"> No </label>
+          </div>
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="salary" class="form-label"
+            >Estimated Salary per month</label
+          >
+          <input type="number" class="form-control" id="salary" required />
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <select class="form-select" aria-label="location" required>
+            <option value="" selected disabled>Select</option>
+            <option value="1">Germany</option>
+            <option value="2">France</option>
+            <option value="3">Spain</option>
+          </select>
+        </div>
+        <!--  -->
+        <div class="mb-3">
+          <label for="credit_card" class="form-label">Gender</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="male"
+              required
+            />
+            <label class="form-check-label" for="male"> Male </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="female"
+            />
+            <label class="form-check-label" for="female"> Female </label>
+          </div>
+        </div>
+        <!--  -->
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
